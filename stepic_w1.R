@@ -1,3 +1,5 @@
-my_vector1 <- 1:20
-
-print(my_vector1)
+x <- 1:10
+y <- 1:10
+png('rplot.png')
+plot(x,y)
+dev.off()
