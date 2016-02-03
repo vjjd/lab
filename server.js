@@ -11,5 +11,6 @@ let app = express();
 require('./lib/routes')(app);
 
 //Main
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.listen(config.port);

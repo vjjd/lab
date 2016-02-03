@@ -85,6 +85,13 @@ a {
     position: relative;
     top: 1px;
 }
+.plot_container {
+    text-align: center;
+}
+.plot {
+    width: 430px;
+    height: 430px;
+}
 .foot{
     display: block;
     margin: 0.7em 0;

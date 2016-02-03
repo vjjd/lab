@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Allah Akbar</title>
+    <title>R-graph</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-    <p>GO AHEAD, HIT THAT BUTTON. IT'S OK.</p>
-    <form action="run">
-        <input type="submit" value="Button">
+<div class="main">
+    <h1><a href="http://localhost:3000/">R-graph</a></h1>
+    <div class="desc">
+        <p>Wanna make some plots?</p>
+        <p>Relax</p>
+        <p>Press the button...</p>
+    </div>
+    <form action="run" class="form-btn">
+        <button class="btn" type="submit">
+            <i class="fa fa-area-chart fa-2x"></i>
+        </button>
     </form>
+    <div class="plot_container">
+    <% if (exitCode == 0) { %>
+        <img class="plot" src="./rplot.png">
+    <%} else {%>
+        <p>Something went wrong</p>
+    <%}%>
+    </div>
+    <div class="foot">VjjdDev: © 2016</div>
+</div>
 </body>
 </html>

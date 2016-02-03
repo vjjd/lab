@@ -14,7 +14,7 @@ function run (callback) {
 
     r.on('close', (code) => {
         console.log(`child process exited with code ${code}`);
-        if (callback) callback();
+        if (callback) callback(code);
     });
 }
 
