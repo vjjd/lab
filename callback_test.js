@@ -1,4 +1,3 @@
-'use strict';
 
 function run (callback) {
     const spawn = require('child_process').spawn;
@@ -18,4 +17,10 @@ function run (callback) {
     });
 }
 
-module.exports.run = run;
+function nice() {
+    console.log('oke')
+}
+
+run((callback) => {
+    nice(callback);
+});
