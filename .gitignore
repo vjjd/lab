@@ -1,2 +1,6 @@
-/r
 .idea
+.Rapp.history
+node_modules/
+r/
+/lib/rscript.r
+/public/rplot.png
