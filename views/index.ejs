@@ -6,29 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script>
-        var plot = $.ajax({
-            url: '/rplot.png'
-        });
-        plot.fail(function(){
-            setTimeout(function () {
-                window.location.reload()
-            }, 3000);
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            var plot_param;
-            $("#submit").click(function(){
-                plot_param = $("#plot_param").val();
-                $.post("http://localhost:3000/run", {plot_param: plot_param}, function (data) {
-                    if (typeof data.redirect == 'string') {
-                        window.location = data.redirect
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="./script/parameters.js"></script>
+    <script src="./script/reload.js"></script>
 </head>
 <body>
     <div class="header">
@@ -50,6 +29,8 @@
             <img class="plot" src="./rplot.png">
             <%} else if (exitCode == 1488) {%>
             <p>Graph should be here</p>
+            <%} else if (exitCode == 322) {%>
+            <p>Type something</p>
             <%} else {%>
             <p>Something went wrong</p>
             <%}%>
