@@ -5,11 +5,11 @@ body {
     text-shadow: 1px 1px 1px #332D2D;
     overflow: auto;
 }
-
 textarea:focus, button:focus  {
     outline: none;
 }
 
+/*Head*/
 .header {
     position: fixed;
     top: 0;
@@ -20,7 +20,6 @@ textarea:focus, button:focus  {
     background: url(../images/header.jpg) repeat left top;
     padding: 15px 0;
 }
-
 .logoWrapper {
     float: left;
     border: 0;
@@ -28,6 +27,8 @@ textarea:focus, button:focus  {
     padding: 0;
 }
 
+
+/*Main*/
 .main {
     max-width: 780px;
     height: 700px;
@@ -38,6 +39,7 @@ textarea:focus, button:focus  {
     word-wrap: break-word;
 }
 
+/*Post window*/
 .post-header{
     background: #f8f5ed;
     font-size: 12px;
@@ -46,7 +48,6 @@ textarea:focus, button:focus  {
     line-height: 1.78571;
     text-shadow: none;
 }
-
 .rscript{
     display: block;
     font-size: 16px;
@@ -55,13 +56,7 @@ textarea:focus, button:focus  {
     border-left: 4px solid #cf866c;
 }
 
-.desc {
-    display: block;
-    margin: 1.3em 0;
-    text-align: center;
-    font-size: 1.3em;
-}
-
+/*Button*/
 .btn {
     -moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
     -webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
@@ -88,7 +83,6 @@ textarea:focus, button:focus  {
     text-shadow:0px 1px 0px #ae4834;
     margin-top: 5px;
 }
-
 .btn:hover {
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d55940), color-stop(1, #c8533c));
     background:-moz-linear-gradient(top, #d55940 5%, #c8533c 100%);
@@ -99,23 +93,24 @@ textarea:focus, button:focus  {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d55940', endColorstr='#c8533c',GradientType=0);
     background-color:#d55940;
 }
-
 .btn:active {
     position: relative;
     top: 1px;
     outline: none
 }
 
+/*Graph part*/
 .plot_container {
     margin-top: 5px;
     text-align: center;
 }
-
 .plot {
     width: 400px;
     height: 400px;
 }
 
+
+/*Foot*/
 .footer{
     display: block;
     margin: 0.7em 0;

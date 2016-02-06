@@ -1,3 +1,4 @@
+//True redirect and render after post parameters
 $(document).ready(function(){
     var plot_param;
     $("#submit").click(function(){

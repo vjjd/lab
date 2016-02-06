@@ -9,6 +9,8 @@
     <script src="./jquery/parameters.js"></script>
 </head>
 <body>
+
+    <!--Head-->
     <div class="header">
         <div class="logoWrapper">
             <a href="http://localhost:3000/">
@@ -16,13 +18,19 @@
             </a>
         </div>
     </div>
+
+    <!--Main page-->
     <div class="main">
+
+        <!--Post window-->
         <div class="post-header">
             <i class="fa fa-download"></i>
             Set graph parameters!
             <textarea class="rscript" rows="10" cols="45" id="plot_param" maxlength="2000"></textarea>
             <button class="btn" type="submit" id="submit">Run!</button>
         </div>
+
+        <!--Graph part-->
         <div class="plot_container">
             <% if (exitCode == 0) { %>
             <img class="plot" src=<%=currFileName%>>
@@ -35,6 +43,8 @@
             <%}%>
         </div>
     </div>
+
+    <!--Foot-->
     <!--<div class="footer">VjjdDev: © 2016</div>-->
 </body>
 </html>

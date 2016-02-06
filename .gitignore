@@ -1,5 +1,9 @@
 .idea
+
 .Rapp.history
+
 node_modules/
-r/
+
 /lib/rscript.r
+
+*.png
