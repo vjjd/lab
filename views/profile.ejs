@@ -1,0 +1,11 @@
+<p>
+ID: <%= user.id %><br/>
+Username: <%= user.username %><br/>
+Name: <%= user.displayName %><br/>
+<% if (user.emails) { %>
+Email: <a href="http://ru.dotabuff.com/matches/2127937414">
+        <%= user.emails[0].value %>
+    </a>
+<% } %>
+</p>
+<a href="/logout">Log out</a>

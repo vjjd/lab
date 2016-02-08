@@ -21,6 +21,13 @@
 
     <!--Main page-->
     <div class="main">
+        <!--Login-->
+        <div>
+            <% if (!user) { %>
+            <p>Welcome! Please <a href="/login">log in</a>.</p>
+            <% } else { %>
+            <p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>
+        </div>
 
         <!--Post window-->
         <div class="post-header">
@@ -43,6 +50,7 @@
             <%}%>
         </div>
     </div>
+    <% } %>
 
     <!--Foot-->
     <!--<div class="footer">VjjdDev: © 2016</div>-->
