@@ -5,9 +5,13 @@ let express = require('express');
 let passport = require('passport');
 let config = require('./config');
 let bodyParser = require("body-parser");
+let db = require ('./lib/mongoose');
 
 //Create a new Express application.
 let app = express();
+
+//Connect to db
+db.on('error', console.error.bind(console, 'connection error:'));
 
 //Main
 app.set('view engine', 'ejs');
