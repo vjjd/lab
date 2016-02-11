@@ -25,7 +25,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Auth
-require('./lib/passport-local')(passport);
+require('./lib/passport')(passport);
 
 //Routes
 require('./lib/routes')(app, passport);

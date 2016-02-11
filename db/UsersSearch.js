@@ -4,9 +4,9 @@
 let mongoModels = require('./mongoModels');
 
 //Search in db
-exports.findById = function(id, cb) {
+exports.findById = (id, cb) => {
     mongoModels.users.findOne({_id: id})
-        .exec(function (err, acc) {
+        .exec((err, acc) => {
             if (err) handleError(err);
             if (acc) {
                 cb(null, acc);
@@ -16,12 +16,14 @@ exports.findById = function(id, cb) {
         });
 };
 
-exports.findByUsername = function(username, cb) {
+exports.findByUsername = (username, cb) => {
     mongoModels.users.findOne({username: username})
-        .exec(function(err, acc) {
+        .exec((err, user) => {
             if(err) return handleError(err);
-            if (acc.username === username) {
-                return cb(null, acc);
+            if (user) {
+                if (user.username === username) {
+                    return cb(null, user);
+                }
             } else {
                 return cb(null, null);
             }

@@ -25,9 +25,12 @@
         <div>
             <% if (!user) { %>
             <p>Welcome! Please <a href="/login">log in</a>.</p>
+            <p>Or <a href="/reg">sing up!</a>.</p>
             <% } else { %>
             <p>Hello, <%= user.username %>. View your <a href="/profile">profile</a>.</p>
         </div>
+
+
 
         <!--Post window-->
         <div class="post-header">
