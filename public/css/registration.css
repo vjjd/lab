@@ -1,0 +1,13 @@
+#form label.error {
+    color: red;
+    font-weight: bold;
+}
+.exit {
+    display: block;
+    color: saddlebrown;
+    margin-left: 40%;
+}
+.main {
+    width: 600px;
+    margin: 2px auto;
+}

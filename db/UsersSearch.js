@@ -30,3 +30,17 @@ exports.findByUsername = (username, cb) => {
     });
 };
 
+exports.findByEmail = (email, cb) => {
+    mongoModels.users.findOne({email: email})
+        .exec((err, email) => {
+            if(err) return handleError(err);
+            if (email) {
+                if (user.email === email) {
+                    return cb(null, email);
+                }
+            } else {
+                return cb(null, null);
+            }
+        });
+};
+

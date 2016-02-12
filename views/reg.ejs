@@ -1,30 +1,58 @@
-<!--Exit Code. Practising.-->
-<% if (exitCode == 1488) { %>
-<p>In my cue.</p>
-<%} else if (exitCode == 0) {%>
-<p>So, you do know the difference!</p>
-<a href="/login">
-    Log in!
-</a>
-<%} else if (exitCode == 1) {%>
-<p>Not quite my TEMPO!</p>
-<%} else if (exitCode == 2) {%>
-<p>Were you rushing or were you dragging?</p>
-<%} else {%>
-<p>Something went wrong..</p>
-<%}%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="css/registration.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+    <script src="./jquery/registration.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Registration</h1>
 
-<!--Form-->
-<form action="/reg" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username"/><br/>
+        <!--Exit Code.-->
+        <div class="exit">
+            <% if (exitCode == 1488) { %>
+            <p>In my cue.</p>
+            <%} else if (exitCode == 0) {%>
+            <p>So, you do know the difference!</p>
+            <a href="/login">
+                Log in!
+            </a>
+            <%} else if (exitCode == 1) {%>
+            <p>Not quite my TEMPO!</p>
+            <%} else if (exitCode == 2) {%>
+            <p>Were you rushing or were you dragging?</p>
+            <%} else {%>
+            <p>Something went wrong..</p>
+            <%}%>
+        </div>
+
+
+        <!--Registration form-->
+        <form action="/reg" id="form" method="post">
+            <div class="form-group">
+                <label for="login">Login</label>
+                <input type="text" name="username" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Register" class="submit" class="form-control">
+            </div>
+        </form>
     </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
-    </div>
-    <div>
-        <input type="submit" value="Submit"/>
-    </div>
-</form>
+</body>
+</html>
