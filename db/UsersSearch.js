@@ -7,7 +7,7 @@ let mongoModels = require('./mongoModels');
 exports.findById = (id, cb) => {
     mongoModels.users.findOne({_id: id})
         .exec((err, acc) => {
-            if (err) handleError(err);
+            if (err) throw (err);
             if (acc) {
                 cb(null, acc);
             } else {
@@ -19,7 +19,7 @@ exports.findById = (id, cb) => {
 exports.findByUsername = (username, cb) => {
     mongoModels.users.findOne({username: username})
         .exec((err, user) => {
-            if(err) return handleError(err);
+            if(err) throw (err);
             if (user) {
                 if (user.username === username) {
                     return cb(null, user);
@@ -33,7 +33,7 @@ exports.findByUsername = (username, cb) => {
 exports.findByEmail = (email, cb) => {
     mongoModels.users.findOne({email: email})
         .exec((err, email) => {
-            if(err) return handleError(err);
+            if(err) throw (err);
             if (email) {
                 if (user.email === email) {
                     return cb(null, email);

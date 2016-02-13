@@ -31,7 +31,7 @@ textarea:focus, button:focus  {
 /*Main*/
 .main {
     max-width: 780px;
-    height: 700px;
+    height: 800px;
     margin: 85px auto 0 auto;
     background: #FFF;
     padding: 10px 16px 0 16px;

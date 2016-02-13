@@ -5,19 +5,19 @@ let mongoose = require('mongoose');
 let mongoModels = require('./mongoModels');
 let db = require('../db');
 
-exports.createNewAcc = function (username, password, email, cb) {
-    db.users.findByUsername(username, (err, user) => {
+exports.createNewAcc = function (form, cb) {
+    db.users.findByUsername(form.username, (err, user) => {
         if (err) throw err;
         if (user) {return cb(null)}
         if (!user) {
-            db.users.findByEmail(email, (err, mail) => {
+            db.users.findByEmail(form.email, (err, email) => {
                 if (err) throw err;
-                if (mail) {return cb(null)}
-                if (!mail) {
+                if (email) {return cb(null)}
+                if (!email) {
                     let regUser = new mongoModels.users({
-                        username: username,
-                        password: password,
-                        email: email
+                        username: form.username,
+                        password: form.password,
+                        email: form.email
                     });
                     regUser.save(function (err, newUser) {
                         if (err) throw (err);
