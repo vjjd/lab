@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>LogIn</title>
-    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/auth.css" />
 </head>
 <body>
 <div class="main">
@@ -12,11 +13,7 @@
         <p>
             ID: <%= user.id %><br/>
             Username: <%= user.username %><br/>
-            <% if (user.emails) { %>
-            Email: <a href="http://ru.dotabuff.com/matches/2127937414">
-                <%= user.emails[0].value %>
-            </a>
-            <% } %>
+            Email: <%= user.email %>
         </p>
     </div>
     <a href="/logout">Log out</a>

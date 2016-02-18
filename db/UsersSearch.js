@@ -44,3 +44,14 @@ exports.findByEmail = (email, cb) => {
         });
 };
 
+exports.findHistory = (id, cb) => {
+    mongoModels.history.findOne({_id: id})
+        .exec((err, acc) => {
+            if (err) throw (err);
+            if (acc) {
+                return cb (null, acc.filename);
+            } else {
+            return cb (null, null);
+            }
+        });
+};
